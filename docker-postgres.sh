@@ -39,7 +39,7 @@ sudo docker run -d \
   -e POSTGRES_USER=$POSTGRES_USER \
   -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD \
   -e POSTGRES_DB=$DB_NAME \
-  -p 80:5432 \
+  -p 5432:5432 \
   --restart always \
   postgres:9.6.8-alpine
 
@@ -51,7 +51,7 @@ create table testdb (
   first_name VARCHAR(100),
   last_name VARCHAR(100),
   email VARCHAR(100),
-  gender VARCHAR(100),
+  gender VARCHAR(100)
 );
 INSERT INTO testdb (first_name, last_name, email, gender) values ('Rajesh', 'Kumar', 'rk90229@example.com', 'Male');
 EOF
